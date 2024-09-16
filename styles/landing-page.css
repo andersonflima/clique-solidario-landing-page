@@ -1,0 +1,217 @@
+body{
+    margin: auto;
+    padding: auto;
+    font-family: "Quicksand", sans-serif;
+}
+
+/*********************************/
+/**Organização de toda a pagina*/
+.conteiner{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main main";
+}
+
+/*********************************/
+/**Cabeçalho com LOGO e BOTOES*/
+.header{
+    height: 65px;
+    box-shadow: 0px 1px 25px 2px #cecece;
+    display:grid;
+    grid-area: header;
+    grid-template-areas: "logo . . . . . . . . . . . . . . . . buttons";
+    flex-direction: row;
+}
+
+.header img{
+    height: 65px;
+    width: 65px;
+    grid-area: logo;
+}
+
+.header ul{
+    margin:0;
+    padding: 0;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    justify-content: space-between;
+    grid-area:buttons;
+    width: 185px;
+}
+
+.header ul li button{
+    padding: 5px;
+    width: 85px;
+}
+
+.header ul li .entrar{
+    all:unset;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.header ul li .cadastrar, .botao-doar, .botao-arrecadar{
+    all:unset;
+    box-sizing: border-box;
+    background-color: #16C5FD;
+    border: 1px solid #16C5FD;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    cursor:pointer;
+    font-weight: 700;
+    box-shadow: 3px 4px 5px 1px #cecece;
+}
+
+/*********************************/
+/**Organização do conteúdo da página toda*/
+.main{
+    display: grid;
+    grid-template-areas: 
+        "como-funciona como-funciona"
+        "doar arrecadar"
+        "avaliacoes avaliacoes"
+        "info info";
+    grid-area: main;
+    row-gap: 0px;
+}
+
+/*********************************/
+/**Organização do primeiro GRID COMO FUNCIONA*/
+.como-funciona{
+    display:grid;
+    grid-area:como-funciona;
+    grid-template-areas: 
+    "como-funciona-conteudo img";
+    height: auto;
+    box-shadow: 0px 5px 11px 2px #dfdfdf;
+}
+
+.como-funciona-conteudo{
+    grid-area: como-funciona-conteudo;
+    padding: 25px;
+    padding-top: 70px;
+}
+
+.como-funciona-conteudo h1{
+    text-align: center;
+    font-size: 45px;
+}
+
+.como-funciona-conteudo p{
+    all:unset;
+    text-align: center;
+    width:55%;
+    overflow-wrap: break-word;
+}
+
+.como-funciona img{
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 0px solid black;
+}
+
+.como-funciona-paragrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********************************/
+/**Organização do segundo GRID DOAR e QUERO ARRECADAR*/
+.doar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area:doar;
+    padding:35px;
+    border: 0px solid black;
+    background-color: #91D1DB;
+    box-shadow: 0px 0px 10px 2px #71bac5;
+}
+
+.doar img{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px #71bac5;
+}
+
+.arrecadar{
+    grid-area:arrecadar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:35px;
+    background-color: #eeb0ab;
+    box-shadow: 0px 0px 10px 2px #e48888;
+}
+
+.arrecadar img{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 10px #e48888;
+}
+
+
+.doar .paragrafo, .arrecadar .paragrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.doar .paragrafo p, .arrecadar .paragrafo p{
+    text-align: center;
+    width:55%;
+    overflow-wrap: break-word;
+    font-weight: 500;
+}
+
+.botao-arrecadar, .botao-doar{
+    width: 135px;
+    text-align: center;
+}
+
+.botao-doar{
+    box-shadow: 0px 0px 10px 2px #71bac5;
+}
+
+.botao-arrecadar{
+    box-shadow: 0px 0px 10px 2px #e48888;
+}
+
+/*********************************/
+/**Organização do terceiro GRID de AVALIAÇÕES*/
+.avaliacoes{
+    grid-area:avaliacoes;
+}
+
+/*********************************/
+/**Organização do quarto GRID de INFORMAÇÕES*/
+.info{
+    display:grid;
+    grid-template-areas:
+        "titulo-info titulo-info titulo-info"
+        "doacao-avulsa . doacao-causa";
+    grid-area:info;
+}
+
+.titulo-info{
+    grid-area: titulo-info;
+}
+
+.doacao-avulsa{
+    grid-area: doacao-avulsa;
+}
+
+.doacao-causa{
+    grid-area: doacao-causa;
+}
+
+/*********************************/
